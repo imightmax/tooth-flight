@@ -13,12 +13,11 @@
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
             <a-assets>
-                <a-asset-item id="tree-obj" src="./skull.obj"></a-asset-item>
-                <a-asset-item id="tree-mtl" src="./skull.mtl"></a-asset-item>
+                <a-asset-item id="bear" src="Mesh_Bear.gltf"></a-asset-item>
               </a-assets>
         
         <a-marker type="pattern" preset="custom" url="https://brave-fermi-c07ee8.netlify.com/07.patt">
-            <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl">
+            <a-entity gltf-model="#bear"></a-entity>
         </a-marker>
 
         <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
